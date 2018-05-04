@@ -1,0 +1,45 @@
+
+<!-- 导航条
+================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="banner">
+    <div class="container">
+        <div class="navbar-header nav_z">
+            <a class="navbar-brand" href="{:U('Home/Index/index')}">奇石镇</a>
+              <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+        </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            
+                <ul class="nav navbar-nav pull-right qs_nav">
+                    <if condition="is_login()">
+                        <ul class="nav navbar-nav" style="margin-right:0">
+                            <li><a href="{:U('Profile/index')}" target="_blank">{:get_nickname($uid)}</a></li>
+                            <li><a href="{:U('Index/logout')}">退出</a></li>
+                        </ul>
+                    <else/>
+                        <li>
+                            <a href="{:U('Index/login')}">登录</a>
+                        </li>
+                        <li>
+                            <a href="{:U('Index/register')}">注册</a>
+                        </li>
+                    </if>
+                </ul>
+            </nav>
+    </div>
+</div>
+
+
+
+<!--    标题面板  -->
+<div class="jumbotron subhead">
+            <div class="col-md-offset-2">
+            <block name="jum">
+              <h2>用户中心<small></small></h2>
+            </block>
+            </div>
+</div>

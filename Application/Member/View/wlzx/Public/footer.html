@@ -1,0 +1,36 @@
+</div> <!-- /#wrapper -->
+
+  <!-- jQuery -->
+    <script src="__SB__/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="__SB__/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="__SB__/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="__SB__/vendor/raphael/raphael.min.js"></script>
+    <script src="__SB__/vendor/morrisjs/morris.min.js"></script>
+    <script src="__SB__/data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="__SB__/dist/js/sb-admin-2.js"></script>
+    
+<!-- 底部
+================================================== -->
+<footer class="footer">
+  <block name="footer">
+    <div class="container">
+        <p> 本站由 <strong><a href="http://www.onethink.cn" target="_blank">OneThink</a></strong> 强力驱动</p>
+    </div>
+  </block>
+</footer>
+
+<include file="Public/var"/>
+<block name="script"></block> <!-- 用于加载js代码 -->
+<!-- 页面footer钩子，一般用于加载插件JS文件和JS代码 -->
+{:hook('pageFooter', 'widget')}
+<div class="hidden"><!-- 用于加载统计代码等隐藏元素 -->
+	<block name="hidden"></block>
+</div>

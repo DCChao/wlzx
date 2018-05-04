@@ -1,0 +1,14 @@
+/*公用样式*/
+.subhead{padding:20px 0 5px 0;font-size:1em;background-color:#F0F3F5;}
+
+/*基本信息*/
+.profile_nav{margin: 50px 0 30px 0;}
+.base_form .control-label{padding-top: 0;}
+.base_form .form-control{padding: 0 12px;height:25px;}
+
+/*边栏*/
+.u_side{padding-top: 70px;}
+.u_side li a{padding: 10px 15px;}
+
+/*头像*/
+.mt_img{height: 500px;width:auto;}

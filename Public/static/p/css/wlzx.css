@@ -1,0 +1,269 @@
+/** 奇石镇自定义CSS
+ ************************/
+
+
+
+/*通用
+*************************/
+body{background-color: #F0F3F5;}
+.bg_fff{background-color: #fff;}
+.con_box{padding:20px;
+        box-shadow: #ccc 0 1px 5px;
+        border-radius: 3px;
+}
+.doc_after{margin-top: 20px;}
+.text_indent{}
+.position .panel-body{list-style: none;padding: 10px 0;}
+
+::selection{background-color: #66CC33; color:#fff; /* Safari */}  
+::-moz-selection{background-color: #66CC33; color:#fff; /* Firefox */ }   
+::-webkit-selection{background-color: #66CC33; color:#fff; /* webkit */ }
+
+
+/** 导航
+*****************************/
+/** 主导航 **/
+.qs_nav{padding:0 20px;}
+.navbar-height{height:30px;}
+.nav_z{padding: 0 15px;}
+
+.subhead{padding:20px 0 5px 0;font-size:1em;background-color:#F0F3F5;}
+.subhead h2{font-weight:bolder;color:#27a;}
+/** 二级导航 **/
+.nav_c{list-style: none;line-height:1em;}
+.nav_c > li{float: left;padding:5px 2px;margin:0 5px;}
+.nav_c >.active{border-bottom:3px solid #90d17d;}
+.nav_c > li>a{text-decoration:none;}
+.nav_search{padding:0;margin:0;}
+.nav_input{height:24px; padding:3px 10px;margin:0;}
+
+
+/* 首页
+********************** */
+.index_td td{overflow: hidden;height:30px;display: block;}
+.index_txt{height:50px;}
+.index_mh{overflow: hidden;height:20px;}
+
+/*文档模型
+********************/
+#code{width:151px; margin:0 auto;}
+.index_l{
+    padding-top: 10px;
+}
+
+/* blog
+**************************/
+.blog_img img{
+    width:60px;
+    height:60px;
+}
+.blog_txt{color: #666;
+    margin-left: 70px;
+    padding:0 15px 5px 0;
+    border-bottom:1px dashed #ddd;
+}
+.blog_txt h2{font-size: 16px;
+    margin: 0 0 5px 0;
+}
+.blog_txt h2 a{color: #3E62A6;
+    font-weight: bolder;
+}
+.blog_pager{padding-right: 50px;}
+.blog_c{word-break: break-all}
+.blog_c img{max-width: 90%;}
+.blogpre{overflow: auto;}
+
+/*播放*/
+.playlist{margin-top: 10px;}
+.playlist .panel-heading{padding:5px 10px;}
+.playlist .panel-body{padding: 0;}
+.playlist ul li{list-style: none;float: left;margin:5px;}
+
+
+
+/* = ot默认分页样式
+------------------------------------------ */
+.page {
+    margin: 10px 0;
+    *zoom: 1;
+}
+.page:before,
+.page:after {
+    display: table;
+    content: "";
+}
+.page:after {
+    clear:both;
+}
+.page a,
+.page span {
+    float: left;
+    margin-left: -1px;
+    padding: 0 14px;
+    height: 30px;
+    line-height: 30px;
+    color: #000;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    /*background-color: #4bbd00;*/
+}
+.page a:hover
+ {
+    text-decoration: none;
+    background-color: #387C0B;
+}
+.page .current {
+	border-top: 1px solid #387C0B;
+}
+.page .next,
+.page .prev {
+    font-family: "宋体";
+    font-weight: bold;
+}
+.page .rows {
+	border-right: 1px solid #CCCCCC;
+}
+
+
+/**音乐
+ **************/
+ .hm_img{max-height:165px;}
+.m_bg{background-color: transparent;border-width: 0px;min-height: 245px;}
+.music_txt{height: 50px;}
+.music_text{min-height:8em;}
+.music_text h3{font-size:1.5em;}
+#m_contents{min-height:150px;}
+.cdh_img{padding:3px 3px 3px 3px;border-left: 15px solid #444;max-height: 185px;max-width: 185px;
+    background:rgba(255, 255,255,0.3);
+    box-shadow: #ccc 0 1px 5px;
+}
+#m_info h3{border-left: 2px solid #ccc;padding-left: 10px;}
+#m_info ul {list-style:none;padding-left:0;}
+#m_info ul li{padding:5px 5px;}
+.m_search{margin-top:15px;}
+.m_info_content{margin-top: 20px;}
+.m_info_content .tab-content{margin-top: 20px;}
+
+/*单曲*/
+.single_c{padding-top:50px;}
+.single_c h4 a{color: #000;font-weight: bolder;}
+.single_c h4 a:hover{color:#428bca;}
+.single_lists{box-shadow: #ccc 0 1px 5px;}
+.single_lists h3{margin-top:5px;}
+.single_img{padding:7px;border:1px solid #BBB;}
+.single_play{display: block;font-size: 4em;margin-top: -120px;padding-bottom: 50px;margin-left:auto;margin-right: auto;}
+.single_play:hover{display: block;text-decoration: none;}
+#mplayer{padding-top: 10px;}
+
+.playerbox{background:rgba(255, 255,255,0.3);
+    box-shadow: #ccc 0 1px 5px;
+}
+.playerbox h1{font-size:16px;font-weight: bolder;}
+.m_page li > a{padding: 0px 0px;background-color: transparent;border-width: 0px; border-radius: 0px; font-size:1.2em;}
+.m_txt{height:100px;}
+.m_txt>h1>a{color: #333;}
+.m_txt>h1>a:hover{color:#428bca;text-decoration: none;}
+.m_x{font-size:12px;padding-top:5px;}
+.m_list{;margin-top: 5px;}
+.m_description{margin-top: 10px;color: #428bca;}
+.m_sz:hover{cursor: pointer;color:#428bca;}
+
+ /*合辑*/
+.albums_img{margin-left:1.5em;display:block;}
+.m_box{margin-top: 1.5em;min-height:300px}
+.m_nav{padding-left:30px;}
+.m_nav li a{font-size:1.5em;}
+.m_box>.tab-content{margin-top: 1.5em;}
+
+.albums_box{padding-top: 30px;}
+.albums_player{margin-top:40px;}
+#albums_txt{max-height:400px;
+    overflow:hidden;
+    margin-top:30px;
+    padding: 17px;
+    text-shadow: black 0 0 10px;
+    background: rgba(0,0,0,0.4);
+}
+#content_txt{height:400px;width:110%;padding-right:50px;color: #eee;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    background-image:
+}
+.albums_f h1{color: #fff;font-size:1.5em;font-weight:bolder;}
+.albums_f{color: #fff;position: absolute;bottom: 55px;}
+.albums_f p{text-shadow: black 0 0 10px;}
+.albums_f span{float: right;padding:5px;color: #fff;font-size:12px;margin-left: 5px;line-height: 22px;background: rgba(0,0,0,0.4);}
+.albums_f span a{color: #fff;}
+.albums_f span a:hover{color: #428bca;}
+.albums_page{padding:0px;margin:0;}
+.albums_page li > a{padding: 0px 0px;background-color: transparent;border-width: 0px; border-radius: 0px; font-size:1.2em;}
+.albums_page li > a:hover{padding: 0px 0px;background-color: transparent;border-width: 0px; border-radius: 0px; font-size:1.2em;}
+.albums_links li{display: inline;list-style: none;margin:0 5px;}
+.albums_links li>a{color: #fff;font-size: 12px;}
+.albums_links li>a:hover{color:#428bca;text-decoration: none;}
+
+.albums_cb{background: rgba(0,0,0,0.4); padding:30px 0 0 30px; width:30px;height: 100%; position:fixed; right:0px; top:0px;z-index: 1;}
+.albums_cb_box{width:270px;}
+.albums_list h4{font-weight: bold;padding-left: 40px;}
+.albums_list h4>a{color: #33CC99;}
+.albums_list li{list-style: none;}
+.albums_list li>a{color: #fff;display: block;}
+.albums_list li>a:hover{color: #3399FF;}
+
+
+/*影视
+******************************/
+/** 电影 **/
+.v_bg{background-color: #222;padding-top: 30px;margin-bottom: 20px;}
+#v_info{padding: 20px 0 0 40px;}
+#v_info h1{color: #fff;font-weight: bolder;}
+#v_info ul {list-style:none;padding-left:0;}
+#v_info ul li{padding:5px 5px;color: #fff;font-size: 1.1em;}
+#v_info ul li span{color:#777;}
+.movie_txt{height:100px;}
+.movie_box{margin: 15px 0;min-height:}
+.movie_content h3{margin-top:5px;}
+.movie_content a{display: block;}
+.movie_img{}
+.movie_img img{padding: 5px;border: 1px solid #ccc;}
+.movie_img:hover img{
+    box-shadow: #ccc 0 1px 5px;
+}
+.v_content{text-indent:2em;}
+
+.v_description{font-size:1.2em;font-weight: bold; color:#2a6496;text-indent: 2em;margin-top:30px;margin-top: 20px;}
+.v_list{margin-top:30px;}
+.v_list>li{list-style: none;float: left;margin:2px;color: #777;}
+.v_list>li>a{font-size: 14px;}
+
+.inset-shadow{
+   -moz-box-shadow: 0 0 100px 50px #222 inset;
+   -webkit-box-shadow: 0 0 100px 50px #222 inset;
+   box-shadow: 0 0 100px 50px #222 inset;
+}
+
+
+
+/** 下载
+ **********************/
+ .dl_content{padding-top:50px;}
+ .download{text-align:center;}
+ .download li{list-style: none;border: 3px solid #09c;width:100px;margin: 5px auto;
+    border-radius:15px;
+ }
+ .download li a{text-decoration: none;display:block;}
+ .download li a:hover{text-decoration: none;display:block;color:#fff;background-color:#09c;}
+
+ /* footer
+*******************/
+.footer{border-top:3px dashed #099;margin-top:20px;padding-top: 20px;}
+
+/* side */
+.side{position:fixed;right:0;bottom:15px;z-index:100;}
+.side ul li{width:40px;height:35px;position:relative;border:1px solid #ccc;list-style: none;border-radius: 3px;background:#eee;margin-right: -5px;margin-top: 5px;font-size:25px;line-height:35px;padding: 3px 5px}
+.side ul li a{text-decoration: none;}
+.side ul li .sidebox{position:absolute;width:40px;height:35px;top:0;right:-5px;border:1px solid #ccc;margin-top: 5px;margin: 0 5px;background:#eee;display: block;border-radius: 3px;overflow: hidden;}
+.side ul li .sidebox a{margin:5px;}
+.side ul li .sidetop{width:40px;height:35px;line-height:35px;display:inline-block;transition:all 0.3s;}
+.side ul li #scode{position:absolute;top:-100px;left:-180px;}
+.side ul li .dn{display: none;}

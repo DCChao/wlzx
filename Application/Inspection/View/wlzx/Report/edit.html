@@ -1,0 +1,87 @@
+<extend name="Base/common"/>
+
+<block name="header"></block>
+
+<block name="body">
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">{$lname}</h1>
+                    <div class="alert alert-info alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        上次巡检人：{$list.uid|get_nickname}；巡检时间：{$list.create_time|date="y-m-d",###} 
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <form role="form" action="{:U('Inspection/Report/update',array('rid'=>$rid))}" method="post">
+                        <!-- 机房环境信息 -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                    {$LocationNameAll}
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label>机房温度（℃）</label>
+                                            <input name="temperature" class="form-control" placeholder="填写整数 没有不填">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>机房湿度（%）</label>
+                                            <input name="humidity" class="form-control" placeholder="填写正整数 没有不填">
+                                        </div>
+
+                                        <volist name="content" id="vo">
+                                            <div class="form-group">
+                                                <label>{$vo.title}</label>
+                                                <select  name="{$vo.name}" class="form-control" id="{$vo.name}">
+                                                    <foreach name="vo.extra" item="v" key="k" >
+                                                        <option value="{$k}" {$list[$vo['name']] == $k?'selected="selected"':''} >{$v}</option>
+                                                    </foreach>
+                                                </select>
+                                            </div>
+                                        </volist>
+
+
+
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                备注：
+                            </div>
+                            <!-- .panel-heading -->
+                            <div class="panel-body">
+                                <div class="panel-group" id="accordion">
+                                    <div class="form-group">
+                                        <label>描述</label>
+                                        <textarea  name="text" class="form-control"  id="text" rows="3">{$list.text}</textarea>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- .panel-body -->
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">添加</button>
+                        </div>
+                            <!-- /.panel -->
+                    </form>
+                    
+                    
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            
+        </div>
+        <!-- /#page-wrapper -->
+</block>

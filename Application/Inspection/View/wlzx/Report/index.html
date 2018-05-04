@@ -1,0 +1,84 @@
+<extend name="Base/common"/>
+
+<block name="header"></block>
+
+<block name="body">
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">巡检区域选择</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            选择机房位置
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group col-lg-6">
+                                        <select class="form-control" name="area" id="area">
+                                            <volist name="arealist" id="vo">
+                                                    {// 根据areaID获取页面焦点 } 
+                                                <option value="{$vo.id}" {$vo[id] === $areaID?"selected='selected'":""} >{$vo.name}</option>
+                                            </volist>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 校区机房详情 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <volist name="arealist" id="vo">
+                                <eq name="vo.id" value="$areaID">
+                                    {$vo.name}
+                                </eq>
+                            </volist>
+                        </div>
+                        <!-- .panel-heading -->
+                        <div class="panel-body">
+                            <div class="panel-group" id="accordion">
+
+                                <volist name="arealist" id="vo">
+                                    <eq name="vo.id" value="$areaID">
+                                        <foreach name="vo.Buildings" item="Build" key="k">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <div data-toggle="collapse" data-parent="#accordion" href="#collapse{$k}" aria-expanded="false" class="collapsed">{$Build.name}</div>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapse{$k}" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                                    <div class="panel-body">
+                                                        <if condition="empty($Build[room]) neq 'true' ">
+                                                            <foreach name="Build.room" item="room">
+                                                                <a type="button" href="{:U('Inspection/Report/edit',array('rid'=>$room[id]))}" class="btn btn-outline btn-primary btn-lg btn-block">{$room.name}</a>
+                                                            </foreach>
+                                                        <else />
+                                                            <a type="button" href="{:U('Inspection/Report/edit',array('rid'=>$Build[id]))}" class="btn btn-outline btn-primary btn-lg btn-block">{$Build.name}</a>
+                                                        </if>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </foreach>
+                                    </eq>
+                                </volist>
+                            </div>
+                        </div>
+                        <!-- .panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            
+        </div>
+        <!-- /#page-wrapper -->
+</block>

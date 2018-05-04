@@ -1,0 +1,44 @@
+<extend name="Base/common"/>
+
+<block name="header"></block>
+
+<block name="body">
+    <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">{$list.0.category_id|get_category_title}</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+            	<!-- Contents
+		        ================================================== -->
+		        <section id="contents">
+
+					<volist name="list" id="data">
+						<div class="">
+							<h3 class="ellipsis"><a href="{:U('Article/detail?id='.$data['id'])}">{$data.title}</a></h3>
+						</div>
+						<div>
+							<p class="lead">{$data.description}</p>
+						</div>
+						<div>
+							<span><a href="{:U('Article/detail?id='.$data['id'])}">查看全文</a></span>
+							<span class="pull-right">
+								<span class="author">{$data.uid|get_username}</span>&nbsp;&nbsp;
+								<span>发表于 {$data.create_time|date='Y-m-d H:i:s',###}</span>
+								<span>阅读({$data.view})</span>&nbsp;&nbsp;
+							</span>
+						</div>
+						<hr/>
+			        </volist>
+
+		            <div class="onethink pagination pagination-right pagination-large">
+		                <article:page cate="$category['id']" listrow="$category['list_row']" />
+		            </div>
+		        </section>
+            </div>
+    </div>
+    <!-- /#page-wrapper -->
+</block>

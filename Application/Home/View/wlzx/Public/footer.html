@@ -1,0 +1,35 @@
+</div>
+<!-- /#wrapper -->
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="__SB__/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="__SB__/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="__SB__/vendor/raphael/raphael.min.js"></script>
+    <script src="__SB__/vendor/morrisjs/morris.min.js"></script>
+    <script src="__SB__/data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="__SB__/dist/js/sb-admin-2.js"></script>
+    
+<!-- 底部
+================================================== -->
+<footer class="footer">
+  <div class="container">
+      <a> 本站由 <strong><a href="http://www.onethink.cn" target="_blank">OneThink</a></strong> 强力驱动</a>
+      <a> 开源后台管理模板 <strong><a href="https://blackrockdigital.github.io/startbootstrap-sb-admin-2/pages/index.html" target="_blank">SB Admin v2.0</a></strong> </a>
+  </div>
+  <!-- 开源模板 网址https://blackrockdigital.github.io/startbootstrap-sb-admin-2/pages/index.html -->
+</footer>
+
+<include file="Public/var"/>
+<!-- 用于加载js代码 -->
+<block name="script"></block> 
+<!-- 页面footer钩子，一般用于加载插件JS文件和JS代码 -->
+{:hook('pageFooter', 'widget')}
+<div class="hidden"><!-- 用于加载统计代码等隐藏元素 -->
+	<block name="hidden"></block>
+</div>

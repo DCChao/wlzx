@@ -1,0 +1,23 @@
+@charset "utf-8";
+/*
+前台公共自定义样式
+ ******************/
+
+
+
+/** 导航
+*****************************/
+/** 主导航 **/
+.qs_nav{padding:0 20px;}
+.navbar-height{height:30px;}
+.nav_z{padding: 0 15px;}
+
+.subhead{padding:20px 0 5px 0;font-size:1em;background-color:#F0F3F5;}
+.subhead h2{font-weight:bolder;color:#27a;}
+/** 二级导航 **/
+.nav_c{list-style: none;line-height:1em;}
+.nav_c > li{float: left;padding:5px 2px;margin:0 5px;}
+.nav_c >.active{border-bottom:3px solid #90d17d;}
+.nav_c > li>a{text-decoration:none;}
+.nav_search{padding:0;margin:0;}
+.nav_input{height:24px; padding:3px 10px;margin:0;}
